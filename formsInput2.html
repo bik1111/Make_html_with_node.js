@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Forms 1</title>
+
+    <link rel = "stylesheet" type="text/css" href= "basic.css">
+</head>
+<body> 
+    <form>
+    First name: <br>
+    <input type="text" name="firstname"> <br>
+    Last name :<br>
+    <input type= "text" name="lastname" value="Smith"> <br> <!--Value로 지정되어있으면 빈 칸안에 해당 value가 쓰여져있음-->
+    User password:<br>
+    <input type = "password" name ="password"> <br> <!--name 은 일종의 변수임 유저가 입력하는 value 의 값이 저장되는 장소-->
+
+    <input type = "radio" name ="food" value = "Pizza">Pizza<br>
+    <input type = "radio" name = "food" value = "Tacos" > Tacos <br>
+    <input type = "radio" name = "food" vlaue = "Salad" checked>Salad<br> <!-- checked 는 기본으로 체크되어있는 상태로 만듦-->
+    <!-- name을 동일하게 선택해주면 해당 naem 중 하나만 선택할 수 있게됨.-->
+    <input type ="checkbox" name = "skills" value = "HTML"> I know HTML<br>
+    <input type = "checkbox" name = "skils" value ="JavaScript"> I know JavaScript<br>
+    <!--라디오가 하나만 선택할 수 있다면 체크박스는 중복선택이 가능하게함.-->
+    Quantity (between 1 and 5):
+    <input type="number" name = "quantity" min = "1" max ="5"> <br>
+
+    Birthday:
+    <input type="date" name = "birthday"> <br>
+
+    Select your favorite Color:
+    <input type="color" name = "favcolor"> <br>
+
+    <input type="submit" value = "submit"> <br>
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    color :navy;
+    margin-left : 20px; 
+}
+.testClass {
+    color: red;
+    font-size : 300%;
+       
+}
+
+/* class selecotr 를 쓰기위해서는 . 을 붙여야함 */
+/* 

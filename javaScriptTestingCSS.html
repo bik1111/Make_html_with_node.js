@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onblur Event Page</title>
+	<link rel= "stylesheet" type="text/css" href="basic.css"> 
+<!-- Link Attribute 를 활용해서 basic.css 를 import 시켜오기-->
+
+
+	<script>
+
+	function doMath()
+	{
+		var x = 2;
+		var y = 10;
+		var z = 4;
+		var answer = x * y / z;
+		
+		document.getElementById("output").innerHTML = "The result is " + answer;
+	}
+	</script>
+     <!--p.의 의미: body 안의 element 들 중에 p element 들에게 해당 스타일적용-->
+     <!-- regular , medium 은 해당 class 들을 뜻함 -->
+    <style type="text/css">
+        p.regular {color:blue; font-size:100%;} 
+        p.medium {color:green; font-size:150%;}
+        #output {color:green;  font-size:200%;} 
+    </style>
+
+</head>
+
+<body>
+	<h1>JavaScript Testing.</h1>
+	
+	<button onclick="doMath();">Do the Math</button>
+	<p id="output"></p>
+	
+    <p class = "regular">This is a test of regular.</p>
+    <p class = "testClass"> This is a test of the test class</p>
+     
+
+
+</body>
+
+</html>

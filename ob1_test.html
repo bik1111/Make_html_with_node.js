@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 자바스크립트 오브젝트 </title>
+<script>
+    var tv = new Object();
+    tv.color = "balck";
+    tv.price = 300000;
+    tv.info = function () {
+        document.write("tv 색상: " + this.color, "<br>");
+        document.write("tv 가격:" + this.price, "<br>");
+
+    }
+
+    var car = {
+    color: "black",
+    price : 500000,
+    info : function() { // 위에서 오브젝트를 만든 흔적이 있으므로 " : " 으로 처리
+        document.write("car 색상 " + this.color , "<br>");
+        document.write("car 가격 " + this.price , "<br>");
+        }
+    };
+
+    document.write("<h1> tv객체 메서드 호출 </h1>");
+    tv.info();
+    document.write("<h1> car 객체 메서드 호출</h1>");
+    car.info();
+</script>
+
+</head>
+<body>
+</body>
+</html>

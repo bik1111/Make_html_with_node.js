@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onblur Event Page</title>
+	
+	<script>
+	function checkField1()
+	{
+		var field = document.getElementById("field1").value;
+		
+		if (field.length < 5)
+			document.getElementById("message1").innerHTML = "Too short!";
+		else
+			document.getElementById("message1").innerHTML = "That's long enough!";
+	}
+	
+	function checkField2()
+	{
+		var field = document.getElementById("field2").value;
+		
+		if (field != "")
+			document.getElementById("message2").innerHTML = "Input accepted";
+		else
+			document.getElementById("message2").innerHTML = "You must provide input!";
+	}
+	
+	function checkField3()
+	{
+		var field = document.getElementById("field3").value;
+		var regex = /^[A-Za-z]{3}$/; //regular expression 은 / 로 열어주고 /로 다시닫음.
+        // ^ 의 의미 : 처음부터 , $ 의 의미: 끝이라는 의미
+        // [A-Z, a-z] 는 대문자를 쓰면 처음부터 끝까지 3글자를 대문자, 혹은 소문자를 입력시 처음부터 끝까지 3글자를 소문자로
+		//javascript 의 regular expression
+		if (regex.test(field)) //field 로 받은 값을 regx 로 테스트한다는 의미..
+			document.getElementById("message3").innerHTML = "Input accepted";
+		else
+			document.getElementById("message3").innerHTML = "Please use a three letter country code";
+	}
+	</script>
+
+</head>
+
+<body>
+	<p>JavaScript onblur Event Tests</p>
+	
+	<form>
+	Field 1<input id="field1" type="text" onblur="checkField1();"/> <span id="message1"></span><br>
+	Field 2<input id="field2" type="text" onblur="checkField2();"/> <span id="message2"></span><br>
+	Country code JS: <input id="field3" type="text" onblur="checkField3();"/> <span id="message3"></span><br>
+	Country code HTML5: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code" required><br>
+	<input type="submit">     <!-- HTML5 를 사용하면 자바스크립트의 regular expression의 기능을 "pattern"이라는 속성을 사용할 수 있다.-->
+	</form>
+	
+</body>
+
+</html>
